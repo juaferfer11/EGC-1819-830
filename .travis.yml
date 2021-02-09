@@ -2,6 +2,9 @@ dist: xenial
 services:
   - postgresql
 sudo: required
+branches:
+  only:
+  -master
 addons:
   postgresql: "9.4"
 before_script:
@@ -14,6 +17,5 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - cd decide
-  - if: branch = master 
-  - python manage.py test --keepdb 
+  - cd decide 
+    python manage.py test --keepdb 
