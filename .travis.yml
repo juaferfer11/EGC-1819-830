@@ -4,7 +4,7 @@ services:
 sudo: required
 branches:
   only:
-  -master
+  - master
 addons:
   postgresql: "9.4"
 before_script:
